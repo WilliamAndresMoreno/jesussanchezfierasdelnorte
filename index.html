@@ -149,100 +149,122 @@
       <div class="contenedor">
         <div class="encabezado">
           <h2>Cotiza tu producción</h2>
-          <p>Cuéntanos qué necesitas y te respondemos al correo o al WhatsApp con una propuesta.</p>
+          <p>Tres pasos rápidos y te respondemos con una propuesta.</p>
         </div>
         <div class="contacto-doble">
-          <form id="formulario" class="formulario" action="https://formsubmit.co/produsanchez@gmail.com" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="Nueva solicitud de cotización desde la web">
+          <form id="formulario" class="formulario" action="https://formsubmit.co/produsanchez@gmail.com" method="POST" novalidate data-subject="Nueva solicitud de cotización - Producciones Sánchez">
+            <input type="hidden" name="_subject" value="Nueva solicitud de cotización - Producciones Sánchez">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://williamandresmoreno.github.io/jesussanchezfierasdelnorte/gracias.html">
             <input type="text" name="_honey" style="display:none">
 
-            <div class="campo">
-              <label for="nombre">Nombre completo</label>
-              <input id="nombre" name="Nombre" type="text" required autocomplete="name" placeholder="Tu nombre o nombre artístico">
-            </div>
-            <div class="fila">
-              <div class="campo">
-                <label for="telefono">WhatsApp</label>
-                <input id="telefono" name="WhatsApp" type="tel" required autocomplete="tel" placeholder="300 000 0000">
+            <ol class="progreso" aria-label="Progreso">
+              <li class="activo"><span>1</span>Servicio</li>
+              <li><span>2</span>Detalles</li>
+              <li><span>3</span>Tus datos</li>
+            </ol>
+            <div class="barra-progreso"><div class="relleno" style="width:33%"></div></div>
+
+            <fieldset class="paso activo" data-paso="1">
+              <legend>Servicio</legend>
+              <div class="fichas">
+              <label class="ficha"><input type="radio" name="Servicio" value="Producción completa" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M9 3v12.3a3.5 3.5 0 1 0 2 3.2V7h6v6.3a3.5 3.5 0 1 0 2 3.2V3z"/></svg></span><span>Producción completa</span></label>
+              <label class="ficha"><input type="radio" name="Servicio" value="Grabación de voz" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M12 15a4 4 0 0 0 4-4V5a4 4 0 0 0-8 0v6a4 4 0 0 0 4 4zm6-4a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.9V22h2v-3.1A8 8 0 0 0 20 11h-2z"/></svg></span><span>Grabación de voz</span></label>
+              <label class="ficha"><input type="radio" name="Servicio" value="Mezcla y masterización" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M3 17h4v-2H3zm0-6h8V9H3zm0-6h12V3H3zm6 14h12v-2H9zm6-6h6V9h-6zm2-8v2h4V5z"/></svg></span><span>Mezcla y masterización</span></label>
+              <label class="ficha"><input type="radio" name="Servicio" value="Pista o karaoke" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M12 3v10.6A4 4 0 1 0 14 17V7h4V3z"/></svg></span><span>Pista o karaoke</span></label>
+              <label class="ficha"><input type="radio" name="Servicio" value="Composición" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M3 17.3V21h3.8L17.8 9.9l-3.7-3.7zm17.7-10.1a1 1 0 0 0 0-1.4l-2.4-2.4a1 1 0 0 0-1.4 0l-1.9 1.9 3.8 3.8z"/></svg></span><span>Composición</span></label>
+              <label class="ficha"><input type="radio" name="Servicio" value="Distribución digital" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M19.4 10A7.5 7.5 0 0 0 5.3 8 6 6 0 0 0 6 20h13a5 5 0 0 0 .4-10zM13 13v4h-2v-4H8l4-4 4 4z"/></svg></span><span>Distribución digital</span></label>
+              </div>
+              <p class="ayuda" data-ayuda>Selecciona una opción para continuar.</p>
+              <div class="acciones">
+                <button type="button" class="boton" data-siguiente>Continuar</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="paso" data-paso="2">
+              <legend>Detalles</legend>
+              <div class="fila">
+                <div class="campo">
+                  <label for="genero">Género musical</label>
+                  <select id="genero" name="Genero">
+                    <option>Norteño</option>
+                    <option>Popular</option>
+                    <option>Despecho</option>
+                    <option>Ranchera</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <div class="campo">
+                  <label for="modalidad">¿Cómo quieres grabar?</label>
+                  <select id="modalidad" name="Modalidad">
+                    <option>En el estudio</option>
+                    <option>De forma remota</option>
+                    <option>Aún no lo sé</option>
+                  </select>
+                </div>
               </div>
               <div class="campo">
-                <label for="correo">Correo electrónico</label>
-                <input id="correo" name="Correo" type="email" required autocomplete="email" placeholder="tucorreo@ejemplo.com">
-              </div>
-            </div>
-            <div class="fila">
-              <div class="campo">
-                <label for="servicio">Servicio que necesitas</label>
-                <select id="servicio" name="Servicio" required>
-                  <option value="" disabled selected>Selecciona una opción</option>
-                  <option>Producción musical completa</option>
-                  <option>Grabación de voz</option>
-                  <option>Mezcla y masterización</option>
-                  <option>Pista o karaoke</option>
-                  <option>Composición de canción</option>
-                  <option>Distribución digital</option>
-                  <option>Otro</option>
-                </select>
+                <label for="referencia">Enlace de referencia (opcional)</label>
+                <input id="referencia" name="Referencia" type="url" placeholder="Un video o canción que te sirva de guía">
               </div>
               <div class="campo">
-                <label for="genero">Género musical</label>
-                <select id="genero" name="Genero">
-                  <option>Norteño</option>
-                  <option>Popular</option>
-                  <option>Despecho</option>
-                  <option>Ranchera</option>
-                  <option>Otro</option>
-                </select>
+                <label for="mensaje">Cuéntanos sobre tu proyecto</label>
+                <textarea id="mensaje" name="Mensaje" rows="4" maxlength="600" required placeholder="Ejemplo: tengo la letra de una canción de despecho y quiero producirla completa con voz grabada."></textarea>
+                <small class="contador"><span data-contador>0</span>/600</small>
               </div>
-            </div>
-            <div class="campo">
-              <label for="mensaje">Cuéntanos sobre tu proyecto</label>
-              <textarea id="mensaje" name="Mensaje" rows="5" required placeholder="Ejemplo: tengo la letra de una canción de despecho y quiero producirla completa con voz grabada."></textarea>
-            </div>
-            <button class="boton" type="submit" id="enviar">Enviar solicitud</button>
-            <p class="estado" id="estado" role="status" aria-live="polite"></p>
+              <div class="acciones">
+                <button type="button" class="boton secundario" data-atras>Atrás</button>
+                <button type="button" class="boton" data-siguiente>Continuar</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="paso" data-paso="3">
+              <legend>Tus datos</legend>
+              <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" name="Nombre" type="text" required autocomplete="name" placeholder="Tu nombre o el de tu empresa">
+              </div>
+              <div class="fila">
+                <div class="campo">
+                  <label for="telefono">WhatsApp</label>
+                  <input id="telefono" name="WhatsApp" type="tel" required autocomplete="tel" placeholder="300 000 0000">
+                </div>
+                <div class="campo">
+                  <label for="correo">Correo electrónico</label>
+                  <input id="correo" name="Correo" type="email" required autocomplete="email" placeholder="tucorreo@ejemplo.com">
+                </div>
+              </div>
+              <div class="resumen" data-resumen aria-live="polite"></div>
+              <div class="acciones">
+                <button type="button" class="boton secundario" data-atras>Atrás</button>
+                <button class="boton" type="submit" id="enviar">Enviar solicitud</button>
+              </div>
+              <p class="estado" id="estado" role="status" aria-live="polite"></p>
+            </fieldset>
           </form>
 
           <aside class="lateral">
             <div class="tarjeta">
               <h3>¿Prefieres escribir directo?</h3>
-              <a href="https://wa.me/573234150246?text=Hola%2C%20quiero%20cotizar%20una%20producci%C3%B3n%20musical" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
-                323 415 0246
-              </a>
-              <a href="https://wa.me/573203323539" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
-                320 332 3539
-              </a>
-              <a href="mailto:produsanchez@gmail.com?subject=Cotizaci%C3%B3n%20producci%C3%B3n%20musical">
-                <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                produsanchez@gmail.com
-              </a>
-              <a href="https://www.instagram.com/jesussanchezfierasdelnorte/" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.2.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.3-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
-                Instagram
-              </a>
-              <a href="https://www.tiktok.com/@jesussanchezprodu" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24"><path d="M19.6 5.7a5 5 0 0 1-3.5-3.2 5 5 0 0 1-.2-1.5h-3.7v14.6a3 3 0 0 1-3 2.9 3.1 3.1 0 0 1-3.1-3.1 3.1 3.1 0 0 1 4-2.9v-3.8a6.8 6.8 0 0 0-7.7 6.7 6.8 6.8 0 0 0 6.8 6.8 6.8 6.8 0 0 0 6.8-6.8V8.1a8.6 8.6 0 0 0 5 1.6V6a5 5 0 0 1-1.4-.3z"/></svg>
-                TikTok
-              </a>
+              <a href="https://wa.me/573234150246?text=Hola%2C%20quiero%20cotizar%20una%20producci%C3%B3n%20musical" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>323 415 0246</a>
+              <a href="https://wa.me/573203323539" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>320 332 3539</a>
+              <a href="mailto:produsanchez@gmail.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>produsanchez@gmail.com</a>
+              <a href="https://www.instagram.com/jesussanchezfierasdelnorte/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.2.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.3-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>Instagram</a>
+              <a href="https://www.tiktok.com/@jesussanchezprodu" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.7a5 5 0 0 1-3.5-3.2 5 5 0 0 1-.2-1.5h-3.7v14.6a3 3 0 0 1-3 2.9 3.1 3.1 0 0 1-3.1-3.1 3.1 3.1 0 0 1 4-2.9v-3.8a6.8 6.8 0 0 0-7.7 6.7 6.8 6.8 0 0 0 6.8 6.8 6.8 6.8 0 0 0 6.8-6.8V8.1a8.6 8.6 0 0 0 5 1.6V6a5 5 0 0 1-1.4-.3z"/></svg>TikTok</a>
             </div>
             <div class="tarjeta">
               <h3>Preguntas frecuentes</h3>
               <details>
                 <summary>¿Puedo grabar desde otra ciudad?</summary>
-                <p>Sí. Trabajamos de forma remota: te enviamos la pista, grabas tu voz y nosotros hacemos la edición, mezcla y masterización.</p>
+                <p>Sí. Te enviamos la pista, grabas tu voz y nosotros hacemos la edición, mezcla y masterización.</p>
               </details>
               <details>
                 <summary>¿Cuánto tarda una producción?</summary>
-                <p>Depende del proyecto, pero una canción completa suele estar lista entre una y tres semanas después de aprobar el arreglo.</p>
+                <p>Una canción completa suele estar lista entre una y tres semanas después de aprobar el arreglo.</p>
               </details>
               <details>
                 <summary>¿Qué recibo al final?</summary>
-                <p>Tu canción en alta calidad (WAV y MP3), la pista instrumental y, si lo necesitas, el acompañamiento para publicarla en plataformas.</p>
+                <p>Tu canción en alta calidad (WAV y MP3), la pista instrumental y acompañamiento para publicarla en plataformas.</p>
               </details>
             </div>
           </aside>

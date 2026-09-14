@@ -229,3 +229,44 @@ details p { color: var(--gris); margin: 0.6rem 0 0; font-size: 0.97rem; }
 .gracias { min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 3rem 1.25rem; }
 .gracias h1 { font-size: clamp(2.4rem, 6vw, 4rem); color: var(--dorado); }
 .gracias p { margin: 0 auto 1.5rem; }
+
+/* Formulario por pasos */
+.formulario fieldset { border: 0; padding: 0; margin: 0; }
+.formulario legend { font-family: 'Anton', sans-serif; font-size: 1.5rem; letter-spacing: 0.02em; margin-bottom: 1rem; color: var(--dorado); }
+.paso { display: none; }
+.paso.activo { display: block; animation: aparecer .25s ease; }
+@keyframes aparecer { from { opacity: 0; transform: translateX(12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .paso.activo { animation: none; } }
+
+.progreso { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; padding: 0; margin: 0 0 0.5rem; font-size: 0.9rem; color: var(--gris); }
+.progreso li { display: flex; align-items: center; gap: 0.5rem; }
+.progreso li span { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; border: 2px solid rgba(255,255,255,0.25); font-weight: 600; flex: none; }
+.progreso li.activo { color: var(--crema); }
+.progreso li.activo span { border-color: var(--acento); background: var(--acento); color: #fff; }
+.progreso li.hecho span { border-color: var(--acento); color: var(--acento); }
+.barra-progreso { height: 4px; background: rgba(255,255,255,0.12); border-radius: 2px; margin-bottom: 1.5rem; overflow: hidden; }
+.barra-progreso .relleno { height: 100%; background: var(--acento); transition: width .3s ease; }
+
+.fichas { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.8rem; margin-bottom: 0.75rem; }
+.ficha { position: relative; cursor: pointer; border: 2px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 1rem 0.75rem; text-align: center; display: grid; gap: 0.5rem; justify-items: center; font-weight: 600; font-size: 0.95rem; background: rgba(255,255,255,0.03); transition: border-color .15s, background .15s; }
+.ficha input { position: absolute; opacity: 0; width: 0; height: 0; }
+.ficha .icono { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,0.08); }
+.ficha .icono svg { width: 22px; height: 22px; fill: var(--gris); }
+.ficha:hover { border-color: rgba(255,255,255,0.4); }
+.ficha:has(input:checked) { border-color: var(--acento); background: color-mix(in srgb, var(--acento) 18%, transparent); }
+.ficha:has(input:checked) .icono { background: var(--acento); }
+.ficha:has(input:checked) .icono svg { fill: #fff; }
+.ficha:has(input:focus-visible) { outline: 3px solid var(--dorado); outline-offset: 2px; }
+.ayuda { color: var(--gris); font-size: 0.9rem; margin: 0 0 1rem; }
+.ayuda.error { color: #ff7b7b; }
+
+.acciones { display: flex; gap: 0.8rem; justify-content: flex-end; margin-top: 0.5rem; }
+.acciones .boton { cursor: pointer; }
+.acciones .boton[disabled] { opacity: 0.6; cursor: wait; }
+.formulario .boton { width: auto; }
+.contador { display: block; text-align: right; color: var(--gris); font-size: 0.8rem; margin-top: 0.25rem; }
+.campo input[type="date"] { color-scheme: dark; }
+
+.resumen { background: rgba(255,255,255,0.05); border-left: 4px solid var(--acento); border-radius: 4px; padding: 0.9rem 1rem; margin: 0.5rem 0 1.2rem; font-size: 0.95rem; color: var(--gris); }
+.resumen strong { color: var(--crema); }
+.resumen ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
