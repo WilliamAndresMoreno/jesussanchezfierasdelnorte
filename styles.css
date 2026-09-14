@@ -191,7 +191,7 @@ footer a { color: var(--gris); }
   width: 100%; padding: 0.75rem 0.9rem; border-radius: 6px; font: inherit; color: var(--crema);
   background: #111; border: 1px solid rgba(255,255,255,0.2);
 }
-.campo select option { color: #000; }
+.campo select option { background: #111; color: var(--crema); }
 .campo input:focus, .campo select:focus, .campo textarea:focus { outline: 2px solid var(--acento); border-color: var(--acento); }
 .campo input.invalido, .campo select.invalido, .campo textarea.invalido { border-color: #ff5a5a; }
 .campo textarea { resize: vertical; min-height: 120px; }
@@ -270,3 +270,22 @@ details p { color: var(--gris); margin: 0.6rem 0 0; font-size: 0.97rem; }
 .resumen { background: rgba(255,255,255,0.05); border-left: 4px solid var(--acento); border-radius: 4px; padding: 0.9rem 1rem; margin: 0.5rem 0 1.2rem; font-size: 0.95rem; color: var(--gris); }
 .resumen strong { color: var(--crema); }
 .resumen ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+
+/* Videos interactivos */
+.video-card { all: unset; display: block; cursor: pointer; width: 100%; color: var(--crema); }
+.video-card:focus-visible { outline: 3px solid var(--dorado); outline-offset: 3px; }
+.video-card .miniatura img { transition: transform .25s ease; }
+.video-card:hover .miniatura img { transform: scale(1.05); }
+.video-card.activo .miniatura { outline: 3px solid var(--acento); }
+.reproductor { margin-bottom: 2rem; }
+.reproductor .video-destacado { margin-bottom: 0.5rem; }
+.ahora { color: var(--dorado); font-weight: 600; margin: 0 0 1.5rem; }
+
+/* Servicios clicables */
+.servicio { cursor: pointer; transition: border-color .15s, transform .15s; }
+.servicio:hover, .servicio:focus-visible { border-top-color: var(--dorado); transform: translateY(-3px); outline: none; }
+.servicio::after { content: "Cotizar este servicio"; display: block; margin-top: 0.6rem; color: var(--acento); font-weight: 600; font-size: 0.9rem; }
+
+/* Enlace activo en la barra */
+.barra nav a.actual { color: var(--dorado); border-bottom: 2px solid var(--acento); }
+@media (max-width: 760px) { .barra nav a.actual { border-bottom: 0; background: rgba(255,255,255,0.06); } }

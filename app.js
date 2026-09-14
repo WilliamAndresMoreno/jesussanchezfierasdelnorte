@@ -129,3 +129,44 @@ if (form) {
 
   mostrar(0);
 }
+
+// Reproducir videos en la página
+const reproductor = document.getElementById('video-destacado');
+const ahora = document.getElementById('ahora');
+if (reproductor) {
+  const tarjetas = document.querySelectorAll('.video-card');
+  tarjetas.forEach(t => t.addEventListener('click', () => {
+    const id = t.dataset.video;
+    const titulo = t.querySelector('.titulo').textContent;
+    reproductor.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+    reproductor.title = titulo;
+    if (ahora) ahora.textContent = `Reproduciendo: ${titulo}`;
+    tarjetas.forEach(x => x.classList.toggle('activo', x === t));
+    document.getElementById('reproductor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }));
+}
+
+// Servicios: preseleccionar en el formulario
+document.querySelectorAll('.servicio').forEach(s => {
+  const ir = () => {
+    const radio = document.querySelector(`.ficha input[value="${s.dataset.servicio}"]`);
+    if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change')); }
+    document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+  };
+  s.addEventListener('click', ir);
+  s.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ir(); } });
+});
+
+// Resaltar sección actual en la barra
+const enlaces = [...document.querySelectorAll('.barra nav a[href^="#"]')];
+const secciones = enlaces.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+if ('IntersectionObserver' in window && secciones.length) {
+  const obs = new IntersectionObserver(entradas => {
+    entradas.forEach(e => {
+      if (e.isIntersecting) {
+        enlaces.forEach(a => a.classList.toggle('actual', a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  secciones.forEach(sec => obs.observe(sec));
+}

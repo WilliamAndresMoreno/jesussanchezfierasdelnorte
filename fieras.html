@@ -77,67 +77,74 @@
       <div class="contenedor">
         <div class="encabezado">
           <h2>Videos</h2>
-          <p>Lo más reciente y los éxitos que más se han escuchado en el canal.</p>
+          <p>Toca cualquier video para reproducirlo aquí mismo.</p>
         </div>
 
-        <iframe class="video-destacado" src="https://www.youtube.com/embed/_GvUXM2-lzg" title="Pueblito Querido - Jesús Sánchez Fieras del Norte" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="reproductor" id="reproductor"><iframe class="video-destacado" id="video-destacado" src="https://www.youtube.com/embed/_GvUXM2-lzg" title="Pueblito Querido - Jesús Sánchez Fieras del Norte" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><p class="ahora" id="ahora">Reproduciendo: Pueblito querido</p></div>
 
         <ul class="videos">
           <li>
-            <a href="https://www.youtube.com/watch?v=Nx9cop3tKJw" target="_blank" rel="noopener">
+            <button type="button" class="video-card" data-video="_GvUXM2-lzg">
+              <div class="miniatura"><img src="https://img.youtube.com/vi/_GvUXM2-lzg/hqdefault.jpg" alt="" loading="lazy"></div>
+              <p class="titulo">Pueblito querido</p>
+              <p class="dato">Jesús Sánchez Fieras del Norte</p>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="video-card" data-video="Nx9cop3tKJw">
               <div class="miniatura"><img src="https://img.youtube.com/vi/Nx9cop3tKJw/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">Mi amuleto eres tú</p>
               <p class="dato">Jesús Sánchez Fieras del Norte</p>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=uwoaLP2kvKg" target="_blank" rel="noopener">
+            <button type="button" class="video-card" data-video="uwoaLP2kvKg">
               <div class="miniatura"><img src="https://img.youtube.com/vi/uwoaLP2kvKg/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">Te eché al olvido</p>
               <p class="dato">Con Virgelina Muñoz y Nataly Quintero</p>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=SroXulRqxY0" target="_blank" rel="noopener">
+            <button type="button" class="video-card" data-video="SroXulRqxY0">
               <div class="miniatura"><img src="https://img.youtube.com/vi/SroXulRqxY0/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">Forastero en mi pueblo</p>
               <p class="dato">Jesús Sánchez Fieras del Norte</p>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=b-PFEYbwwXg" target="_blank" rel="noopener">
+            <button type="button" class="video-card" data-video="b-PFEYbwwXg">
               <div class="miniatura"><img src="https://img.youtube.com/vi/b-PFEYbwwXg/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">La puerta está cerrada</p>
               <p class="dato">Nataly Quintero con Fieras del Norte</p>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=UiXkzZeWj-Q" target="_blank" rel="noopener">
+            <button type="button" class="video-card" data-video="UiXkzZeWj-Q">
               <div class="miniatura"><img src="https://img.youtube.com/vi/UiXkzZeWj-Q/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">Te olvidaré</p>
               <p class="dato">Iván Rodríguez con Fieras del Norte</p>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=PSdpsPCMDi8" target="_blank" rel="noopener">
+            <button type="button" class="video-card" data-video="PSdpsPCMDi8">
               <div class="miniatura"><img src="https://img.youtube.com/vi/PSdpsPCMDi8/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">Tú ya tienes a quien amar</p>
               <p class="dato">Iván Rodríguez con Fieras del Norte</p>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=jujNKsV2i9s" target="_blank" rel="noopener">
+            <button type="button" class="video-card" data-video="jujNKsV2i9s">
               <div class="miniatura"><img src="https://img.youtube.com/vi/jujNKsV2i9s/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">Pueblo de mi corazón</p>
               <p class="dato">Nataly Quintero con Fieras del Norte</p>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=V4MBX5dH7-M" target="_blank" rel="noopener">
+            <button type="button" class="video-card" data-video="V4MBX5dH7-M">
               <div class="miniatura"><img src="https://img.youtube.com/vi/V4MBX5dH7-M/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">Juntos por siempre</p>
               <p class="dato">Fieras del Norte con Nataly Quintero</p>
-            </a>
+            </button>
           </li>
         </ul>
         <p style="margin-top:2rem;text-align:center">
@@ -191,7 +198,7 @@
               <div class="fichas">
               <label class="ficha"><input type="radio" name="Tipo de evento" value="Fiesta privada" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M2 22l14-5-9-9zm12.7-14.7 1.4-1.4 1.4 1.4-1.4 1.4zM18 3l2 2-2 2-2-2zm1 8 2 2-2 2-2-2zM9 2l2 2-2 2-2-2z"/></svg></span><span>Fiesta privada</span></label>
               <label class="ficha"><input type="radio" name="Tipo de evento" value="Feria o fiesta municipal" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M3 21h18v-2H3zm2-3h4v-6H5zm10 0h4V8h-4zM10 18h4V4h-4z"/></svg></span><span>Feria o fiesta municipal</span></label>
-              <label class="ficha"><input type="radio" name="Tipo de evento" value="Boda o quince años" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M12 8a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zM9 2h6l2 4H7z"/></svg></span><span>Boda o quince años</span></label>
+              <label class="ficha"><input type="radio" name="Tipo de evento" value="Cabalgata o fiesta ganadera" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M4 20h16v-2H4zM6 16h12l-1-6h-3V6l-2-3-2 3v4H7z"/></svg></span><span>Cabalgata o fiesta ganadera</span></label>
               <label class="ficha"><input type="radio" name="Tipo de evento" value="Evento empresarial" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M10 4h4v2h-4zM4 8h16v3H4zm0 5h16v7H4zm4-9h8v2H8z"/></svg></span><span>Evento empresarial</span></label>
               <label class="ficha"><input type="radio" name="Tipo de evento" value="Concierto o festival" required><span class="icono"><svg viewBox="0 0 24 24"><path d="m12 17.3 6.2 3.7-1.6-7 5.4-4.7-7.2-.6L12 2 9.2 8.7 2 9.3l5.4 4.7-1.6 7z"/></svg></span><span>Concierto o festival</span></label>
               <label class="ficha"><input type="radio" name="Tipo de evento" value="Otro" required><span class="icono"><svg viewBox="0 0 24 24"><path d="M9 3v12.3a3.5 3.5 0 1 0 2 3.2V7h6v6.3a3.5 3.5 0 1 0 2 3.2V3z"/></svg></span><span>Otro</span></label>
