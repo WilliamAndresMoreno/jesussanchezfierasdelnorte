@@ -289,3 +289,16 @@ details p { color: var(--gris); margin: 0.6rem 0 0; font-size: 0.97rem; }
 /* Enlace activo en la barra */
 .barra nav a.actual { color: var(--dorado); border-bottom: 2px solid var(--acento); }
 @media (max-width: 760px) { .barra nav a.actual { border-bottom: 0; background: rgba(255,255,255,0.06); } }
+
+/* Filtros de trabajos */
+.filtros { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 1.5rem; }
+.filtro { font: inherit; font-weight: 600; cursor: pointer; padding: 0.5rem 1rem; border-radius: 999px; border: 2px solid rgba(255,255,255,0.2); background: transparent; color: var(--crema); }
+.filtro:hover { border-color: rgba(255,255,255,0.5); }
+.filtro.activo { background: var(--acento); border-color: var(--acento); color: #fff; }
+.videos li.oculto { display: none; }
+
+/* Cifras */
+.cifras { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 0 0 2rem; }
+.cifras div { border-left: 4px solid var(--acento); padding: 0.4rem 0 0.4rem 1rem; }
+.cifras strong { display: block; font-family: 'Anton', sans-serif; font-size: 2.2rem; letter-spacing: 0.02em; color: var(--dorado); line-height: 1; }
+.cifras span { color: var(--gris); font-size: 0.95rem; }

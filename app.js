@@ -170,3 +170,14 @@ if ('IntersectionObserver' in window && secciones.length) {
   }, { rootMargin: '-40% 0px -55% 0px' });
   secciones.forEach(sec => obs.observe(sec));
 }
+
+// Filtrar trabajos por artista
+const filtros = document.querySelectorAll('.filtro');
+if (filtros.length) {
+  filtros.forEach(f => f.addEventListener('click', () => {
+    filtros.forEach(x => x.classList.toggle('activo', x === f));
+    document.querySelectorAll('.videos li[data-artista]').forEach(li => {
+      li.classList.toggle('oculto', f.dataset.filtro !== 'todos' && li.dataset.artista !== f.dataset.filtro);
+    });
+  }));
+}
