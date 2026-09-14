@@ -3,89 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jesús Sánchez Fieras del Norte | Música norteña, popular y despecho</title>
-  <meta name="description" content="Sitio oficial de Jesús Sánchez Fieras del Norte: música norteña, popular y despecho. Escucha en Spotify y YouTube, y contacta para presentaciones y grabaciones.">
-  <meta property="og:title" content="Jesús Sánchez Fieras del Norte">
-  <meta property="og:description" content="Música norteña, popular y despecho. Escúchala en Spotify y YouTube.">
-  <meta property="og:image" content="assets/logo-fieras.png">
-  <meta property="og:type" content="profile">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <title>Producciones Sánchez | Estudio de producción musical 100% Digital</title>
+  <meta name="description" content="Producciones Sánchez, estudio de producción musical 100% digital dirigido por Jesús Sánchez. Grabación, arreglos, mezcla y masterización para norteño, popular y despecho.">
+  <meta property="og:title" content="Producciones Sánchez, 100% Digital">
+  <meta property="og:description" content="Producción musical, grabación, mezcla y masterización para norteño, popular y despecho.">
+  <meta property="og:image" content="assets/logo-producciones.png">
+  <link rel="icon" type="image/png" href="assets/logo-producciones.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="tema-estudio">
 
   <header class="barra">
     <a class="marca" href="#inicio">
-      <img src="assets/favicon.png" alt="">
-      Fieras del Norte
+      <img src="assets/logo-producciones.png" alt="">
+      Producciones Sánchez
     </a>
-    <nav aria-label="Secciones">
-      <a href="#musica">Música</a>
-      <a href="#videos">Videos</a>
-      <a href="#biografia">Biografía</a>
+    <button class="menu-boton" id="menu-boton" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav aria-label="Secciones" id="menu">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#trabajos">Trabajos</a>
       <a href="#contacto">Contacto</a>
-      <a class="otro-sitio" href="producciones.html">Producciones Sánchez</a>
+      <a class="otro-sitio" href="fieras.html">Fieras del Norte</a>
     </nav>
   </header>
 
   <main>
     <section class="portada" id="inicio">
       <div>
-        <img class="logo-grande" src="assets/logo-fieras.png" alt="Jesús Sánchez Fieras del Norte">
-        <p class="lema">Norteño <span>&bull;</span> Popular <span>&bull;</span> Despecho</p>
-        <p class="sub">Música con sentimiento desde Colombia. Escúchala en tu plataforma favorita.</p>
+        <img class="logo-grande" src="assets/logo-producciones.png" alt="Producciones Sánchez 100% Digital">
+        <p class="lema">Tu canción, producida <span>de principio a fin</span></p>
+        <p class="sub">Estudio de producción musical dirigido por Jesús Sánchez. Especialistas en norteño, popular y despecho.</p>
         <div class="botones">
-          <a class="boton" href="https://open.spotify.com/artist/6NgKmEg6CVNLuKPYfEcE4Q" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.35.22.46.68.25 1.03zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.99-8.15-2.56-11.97-1.4a.94.94 0 1 1-.54-1.8c4.36-1.32 9.78-.68 13.49 1.6.44.27.58.85.31 1.29zm.13-3.4C15.24 8.33 8.87 8.12 5.17 9.24a1.13 1.13 0 1 1-.65-2.16c4.25-1.29 11.31-1.04 15.76 1.6a1.13 1.13 0 0 1-1.18 1.95z"/></svg>
-            Escuchar en Spotify
-          </a>
-          <a class="boton secundario" href="https://www.youtube.com/channel/UCKslHUxX5P1HYFIMrjHyWVA?sub_confirmation=1" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
-            Suscribirse en YouTube
-          </a>
+          <a class="boton" href="https://wa.me/573234150246?text=Hola%2C%20quiero%20cotizar%20una%20producci%C3%B3n%20musical" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          <a class="boton secundario" href="#servicios">Ver servicios</a>
         </div>
       </div>
     </section>
 
-    <section class="bloque oscuro" id="musica">
+    <section class="bloque oscuro" id="servicios">
       <div class="contenedor">
         <div class="encabezado">
-          <h2>Escucha la música</h2>
-          <p>Reproduce directamente desde Spotify o sigue el canal oficial en YouTube.</p>
+          <h2>Servicios</h2>
+          <p>Todo lo que necesitas para llevar tu canción del papel a las plataformas.</p>
         </div>
-        <iframe class="spotify" src="https://open.spotify.com/embed/artist/6NgKmEg6CVNLuKPYfEcE4Q?utm_source=generator&theme=0" title="Jesús Sánchez Fieras del Norte en Spotify" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
         <div class="rejilla">
           <article>
-            <h3>Norteño</h3>
-            <p>Acordeón, bajo sexto y la fuerza del norte con sabor colombiano.</p>
+            <h3>Producción musical</h3>
+            <p>Arreglos completos con acordeón, bajo sexto, bajo, batería y guitarras al estilo norteño y popular.</p>
           </article>
           <article>
-            <h3>Popular</h3>
-            <p>Canciones para el pueblo, para la fiesta y para el recuerdo.</p>
+            <h3>Grabación de voz</h3>
+            <p>Grabación profesional de voces principales y coros, con afinación y edición.</p>
           </article>
           <article>
-            <h3>Despecho</h3>
-            <p>Letras que hablan de amor, olvido y lo que duele en el alma.</p>
+            <h3>Mezcla y masterización</h3>
+            <p>Sonido balanceado y listo para radio, Spotify, YouTube y todas las plataformas.</p>
+          </article>
+          <article>
+            <h3>Pistas y karaokes</h3>
+            <p>Pistas instrumentales en el tono que necesites para presentaciones en vivo.</p>
+          </article>
+          <article>
+            <h3>Composición</h3>
+            <p>Letras y melodías originales para tu proyecto o adaptación de canciones existentes.</p>
+          </article>
+          <article>
+            <h3>Distribución digital</h3>
+            <p>Acompañamiento para publicar tu música en Spotify, YouTube, Apple Music y más.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="bloque madera" id="videos">
+    <section class="bloque madera" id="proceso">
       <div class="contenedor">
         <div class="encabezado">
-          <h2>Videos</h2>
-          <p>Lo más reciente y los éxitos que más se han escuchado en el canal.</p>
+          <h2>Cómo trabajamos</h2>
+          <p>Un proceso claro, de principio a fin.</p>
         </div>
+        <div class="rejilla">
+          <article>
+            <h3>1. Cuéntanos tu idea</h3>
+            <p>Nos envías tu letra, una grabación de referencia o simplemente el estilo que buscas.</p>
+          </article>
+          <article>
+            <h3>2. Producimos la pista</h3>
+            <p>Creamos el arreglo y te enviamos una versión para que apruebes el estilo y el tono.</p>
+          </article>
+          <article>
+            <h3>3. Grabamos tu voz</h3>
+            <p>En el estudio o de forma remota: tú grabas y nosotros editamos y afinamos.</p>
+          </article>
+          <article>
+            <h3>4. Entregamos tu canción</h3>
+            <p>Mezcla, masterización y archivos finales listos para publicar en todas las plataformas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <iframe class="video-destacado" src="https://www.youtube.com/embed/_GvUXM2-lzg" title="Pueblito Querido - Jesús Sánchez Fieras del Norte" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-
+    <section class="bloque oscuro" id="trabajos">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h2>Trabajos realizados</h2>
+          <p>Producciones grabadas y publicadas desde el estudio.</p>
+        </div>
         <ul class="videos">
           <li>
-            <a href="https://www.youtube.com/watch?v=Nx9cop3tKJw" target="_blank" rel="noopener">
-              <div class="miniatura"><img src="https://img.youtube.com/vi/Nx9cop3tKJw/hqdefault.jpg" alt="" loading="lazy"></div>
-              <p class="titulo">Mi amuleto eres tú</p>
+            <a href="https://www.youtube.com/watch?v=_GvUXM2-lzg" target="_blank" rel="noopener">
+              <div class="miniatura"><img src="https://img.youtube.com/vi/_GvUXM2-lzg/hqdefault.jpg" alt="" loading="lazy"></div>
+              <p class="titulo">Pueblito querido</p>
               <p class="dato">Jesús Sánchez Fieras del Norte</p>
             </a>
           </li>
@@ -97,110 +125,119 @@
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=SroXulRqxY0" target="_blank" rel="noopener">
-              <div class="miniatura"><img src="https://img.youtube.com/vi/SroXulRqxY0/hqdefault.jpg" alt="" loading="lazy"></div>
-              <p class="titulo">Forastero en mi pueblo</p>
-              <p class="dato">Jesús Sánchez Fieras del Norte</p>
-            </a>
-          </li>
-          <li>
             <a href="https://www.youtube.com/watch?v=b-PFEYbwwXg" target="_blank" rel="noopener">
               <div class="miniatura"><img src="https://img.youtube.com/vi/b-PFEYbwwXg/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">La puerta está cerrada</p>
-              <p class="dato">Nataly Quintero con Fieras del Norte</p>
+              <p class="dato">Nataly Quintero</p>
             </a>
           </li>
           <li>
             <a href="https://www.youtube.com/watch?v=UiXkzZeWj-Q" target="_blank" rel="noopener">
               <div class="miniatura"><img src="https://img.youtube.com/vi/UiXkzZeWj-Q/hqdefault.jpg" alt="" loading="lazy"></div>
               <p class="titulo">Te olvidaré</p>
-              <p class="dato">Iván Rodríguez con Fieras del Norte</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=PSdpsPCMDi8" target="_blank" rel="noopener">
-              <div class="miniatura"><img src="https://img.youtube.com/vi/PSdpsPCMDi8/hqdefault.jpg" alt="" loading="lazy"></div>
-              <p class="titulo">Tú ya tienes a quien amar</p>
-              <p class="dato">Iván Rodríguez con Fieras del Norte</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=jujNKsV2i9s" target="_blank" rel="noopener">
-              <div class="miniatura"><img src="https://img.youtube.com/vi/jujNKsV2i9s/hqdefault.jpg" alt="" loading="lazy"></div>
-              <p class="titulo">Pueblo de mi corazón</p>
-              <p class="dato">Nataly Quintero con Fieras del Norte</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=V4MBX5dH7-M" target="_blank" rel="noopener">
-              <div class="miniatura"><img src="https://img.youtube.com/vi/V4MBX5dH7-M/hqdefault.jpg" alt="" loading="lazy"></div>
-              <p class="titulo">Juntos por siempre</p>
-              <p class="dato">Fieras del Norte con Nataly Quintero</p>
+              <p class="dato">Iván Rodríguez</p>
             </a>
           </li>
         </ul>
         <p style="margin-top:2rem;text-align:center">
-          <a class="boton secundario" href="https://www.youtube.com/@Fierasdelnote" target="_blank" rel="noopener">Ver todos los videos en YouTube</a>
+          <a class="boton secundario" href="https://www.youtube.com/@Fierasdelnote" target="_blank" rel="noopener">Ver más en YouTube</a>
         </p>
-      </div>
-    </section>
-
-    <section class="bloque oscuro" id="biografia">
-      <div class="contenedor bio">
-        <div>
-          <div class="encabezado">
-            <h2>Jesús Sánchez</h2>
-            <p>Cantante, compositor y productor musical</p>
-          </div>
-          <p>Jesús Sánchez es la voz y el alma de Fieras del Norte, una agrupación colombiana que lleva más de una década llevando la música norteña, popular y de despecho a los escenarios y a las plataformas digitales.</p>
-          <p>A lo largo de su trayectoria ha grabado y compartido tarima con artistas como Nataly Quintero, Virgelina Muñoz e Iván Rodríguez, con canciones que ya suman decenas de miles de reproducciones en YouTube.</p>
-          <p>Además de cantar, Jesús produce música para otros artistas desde su propio estudio, <strong>Producciones Sánchez, 100% Digital</strong>.</p>
-          <ul>
-            <li>Géneros: norteño, popular y despecho</li>
-            <li>Disponible para presentaciones, ferias, fiestas y eventos privados</li>
-            <li>Colaboraciones y grabaciones con otros artistas</li>
-          </ul>
-        </div>
-        <img class="foto" src="https://i.scdn.co/image/ab6761610000e5eb54bc187018ba6ae57aca4e2f" alt="Jesús Sánchez Fieras del Norte" loading="lazy">
       </div>
     </section>
 
     <section class="bloque madera" id="contacto">
       <div class="contenedor">
         <div class="encabezado">
-          <h2>Contrataciones y contacto</h2>
-          <p>Escríbenos para presentaciones, grabaciones o colaboraciones.</p>
+          <h2>Cotiza tu producción</h2>
+          <p>Cuéntanos qué necesitas y te respondemos al correo o al WhatsApp con una propuesta.</p>
         </div>
-        <div class="contacto">
-          <div class="tarjeta">
-            <h3>WhatsApp y llamadas</h3>
-            <a href="https://wa.me/573234150246" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
-              323 415 0246
-            </a>
-            <a href="https://wa.me/573203323539" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
-              320 332 3539
-            </a>
-          </div>
-          <div class="tarjeta">
-            <h3>Correo electrónico</h3>
-            <a href="mailto:produsanchez@gmail.com">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              produsanchez@gmail.com
-            </a>
-          </div>
-          <div class="tarjeta">
-            <h3>Redes y plataformas</h3>
-            <a href="https://open.spotify.com/artist/6NgKmEg6CVNLuKPYfEcE4Q" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.35.22.46.68.25 1.03zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.99-8.15-2.56-11.97-1.4a.94.94 0 1 1-.54-1.8c4.36-1.32 9.78-.68 13.49 1.6.44.27.58.85.31 1.29zm.13-3.4C15.24 8.33 8.87 8.12 5.17 9.24a1.13 1.13 0 1 1-.65-2.16c4.25-1.29 11.31-1.04 15.76 1.6a1.13 1.13 0 0 1-1.18 1.95z"/></svg>
-              Spotify
-            </a>
-            <a href="https://www.youtube.com/@Fierasdelnote" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
-              YouTube
-            </a>
-          </div>
+        <div class="contacto-doble">
+          <form id="formulario" class="formulario" action="https://formsubmit.co/produsanchez@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Nueva solicitud de cotización desde la web">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://williamandresmoreno.github.io/jesussanchezfierasdelnorte/gracias.html">
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" name="Nombre" type="text" required autocomplete="name" placeholder="Tu nombre o nombre artístico">
+            </div>
+            <div class="fila">
+              <div class="campo">
+                <label for="telefono">WhatsApp</label>
+                <input id="telefono" name="WhatsApp" type="tel" required autocomplete="tel" placeholder="300 000 0000">
+              </div>
+              <div class="campo">
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="Correo" type="email" required autocomplete="email" placeholder="tucorreo@ejemplo.com">
+              </div>
+            </div>
+            <div class="fila">
+              <div class="campo">
+                <label for="servicio">Servicio que necesitas</label>
+                <select id="servicio" name="Servicio" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option>Producción musical completa</option>
+                  <option>Grabación de voz</option>
+                  <option>Mezcla y masterización</option>
+                  <option>Pista o karaoke</option>
+                  <option>Composición de canción</option>
+                  <option>Distribución digital</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="genero">Género musical</label>
+                <select id="genero" name="Genero">
+                  <option>Norteño</option>
+                  <option>Popular</option>
+                  <option>Despecho</option>
+                  <option>Ranchera</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="mensaje">Cuéntanos sobre tu proyecto</label>
+              <textarea id="mensaje" name="Mensaje" rows="5" required placeholder="Ejemplo: tengo la letra de una canción de despecho y quiero producirla completa con voz grabada."></textarea>
+            </div>
+            <button class="boton" type="submit" id="enviar">Enviar solicitud</button>
+            <p class="estado" id="estado" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="lateral">
+            <div class="tarjeta">
+              <h3>¿Prefieres escribir directo?</h3>
+              <a href="https://wa.me/573234150246?text=Hola%2C%20quiero%20cotizar%20una%20producci%C3%B3n%20musical" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
+                323 415 0246
+              </a>
+              <a href="https://wa.me/573203323539" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
+                320 332 3539
+              </a>
+              <a href="mailto:produsanchez@gmail.com?subject=Cotizaci%C3%B3n%20producci%C3%B3n%20musical">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                produsanchez@gmail.com
+              </a>
+            </div>
+            <div class="tarjeta">
+              <h3>Preguntas frecuentes</h3>
+              <details>
+                <summary>¿Puedo grabar desde otra ciudad?</summary>
+                <p>Sí. Trabajamos de forma remota: te enviamos la pista, grabas tu voz y nosotros hacemos la edición, mezcla y masterización.</p>
+              </details>
+              <details>
+                <summary>¿Cuánto tarda una producción?</summary>
+                <p>Depende del proyecto, pero una canción completa suele estar lista entre una y tres semanas después de aprobar el arreglo.</p>
+              </details>
+              <details>
+                <summary>¿Qué recibo al final?</summary>
+                <p>Tu canción en alta calidad (WAV y MP3), la pista instrumental y, si lo necesitas, el acompañamiento para publicarla en plataformas.</p>
+              </details>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -208,19 +245,24 @@
     <section class="bloque oscuro">
       <div class="contenedor cruce">
         <div>
-          <h3>¿Quieres grabar tu propia música?</h3>
-          <p>Jesús Sánchez también produce para otros artistas en Producciones Sánchez, un estudio 100% digital para norteño, popular y despecho.</p>
-          <a class="boton" href="producciones.html">Conocer Producciones Sánchez</a>
+          <h3>Conoce la música de Jesús Sánchez</h3>
+          <p>El director del estudio es también la voz de Fieras del Norte. Escucha su trabajo como artista.</p>
+          <a class="boton" href="fieras.html">Ir a Fieras del Norte</a>
         </div>
-        <img src="assets/logo-producciones.png" alt="Producciones Sánchez 100% Digital">
+        <img src="assets/favicon.png" alt="Jesús Sánchez Fieras del Norte">
       </div>
     </section>
   </main>
 
+  <a class="flotante" href="https://wa.me/573234150246?text=Hola%2C%20quiero%20cotizar%20una%20producci%C3%B3n%20musical" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
+  </a>
+
   <footer>
-    <p>&copy; 2026 Jesús Sánchez Fieras del Norte. Todos los derechos reservados.</p>
-    <p><a href="producciones.html">Producciones Sánchez</a> &nbsp;|&nbsp; <a href="mailto:produsanchez@gmail.com">produsanchez@gmail.com</a></p>
+    <p>&copy; 2026 Producciones Sánchez, 100% Digital. Todos los derechos reservados.</p>
+    <p><a href="fieras.html">Jesús Sánchez Fieras del Norte</a> &nbsp;|&nbsp; <a href="mailto:produsanchez@gmail.com">produsanchez@gmail.com</a></p>
   </footer>
 
+  <script src="app.js"></script>
 </body>
 </html>

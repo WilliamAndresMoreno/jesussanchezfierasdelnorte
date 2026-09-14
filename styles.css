@@ -164,3 +164,68 @@ section.bloque { padding: 4.5rem 1.25rem; }
 /* Pie */
 footer { padding: 2rem 1.25rem; border-top: 1px solid rgba(255,255,255,0.12); color: var(--gris); font-size: 0.9rem; text-align: center; }
 footer a { color: var(--gris); }
+
+/* Menú móvil */
+.menu-boton { display: none; background: none; border: 0; padding: 0.4rem; cursor: pointer; }
+.menu-boton span { display: block; width: 26px; height: 3px; background: var(--crema); margin: 5px 0; border-radius: 2px; transition: transform .2s, opacity .2s; }
+.menu-boton[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.menu-boton[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-boton[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+@media (max-width: 760px) {
+  .menu-boton { display: block; }
+  .barra nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; background: #000; border-bottom: 2px solid var(--acento); padding: 0.5rem 0; }
+  .barra nav.abierto { display: flex; }
+  .barra nav a { padding: 0.8rem 1.25rem; font-size: 1.05rem; }
+  .barra nav a.otro-sitio { border: 0; margin: 0; }
+}
+
+/* Formulario */
+.contacto-doble { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; align-items: start; }
+@media (max-width: 860px) { .contacto-doble { grid-template-columns: 1fr; } }
+.formulario { background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.14); border-radius: 10px; padding: 1.75rem; }
+.formulario .fila { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 560px) { .formulario .fila { grid-template-columns: 1fr; } }
+.campo { margin-bottom: 1.1rem; }
+.campo label { display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--crema); }
+.campo input, .campo select, .campo textarea {
+  width: 100%; padding: 0.75rem 0.9rem; border-radius: 6px; font: inherit; color: var(--crema);
+  background: #111; border: 1px solid rgba(255,255,255,0.2);
+}
+.campo select option { color: #000; }
+.campo input:focus, .campo select:focus, .campo textarea:focus { outline: 2px solid var(--acento); border-color: var(--acento); }
+.campo input.invalido, .campo select.invalido, .campo textarea.invalido { border-color: #ff5a5a; }
+.campo textarea { resize: vertical; min-height: 120px; }
+.formulario .boton { width: 100%; justify-content: center; font-size: 1.1rem; cursor: pointer; }
+.formulario .boton[disabled] { opacity: 0.6; cursor: wait; }
+.estado { margin: 1rem 0 0; min-height: 1.4em; font-weight: 500; }
+.estado.ok { color: #7ddc66; }
+.estado.error { color: #ff7b7b; }
+
+.lateral { display: grid; gap: 1.5rem; }
+.lateral .tarjeta { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 1.5rem; }
+.lateral .tarjeta h3 { margin-bottom: 0.8rem; }
+.lateral .tarjeta a { display: flex; align-items: center; gap: 0.6rem; color: var(--crema); text-decoration: none; padding: 0.4rem 0; font-weight: 500; }
+.lateral .tarjeta a:hover { color: var(--dorado); }
+.lateral svg { width: 22px; height: 22px; fill: var(--acento); flex: none; }
+details { border-top: 1px solid rgba(255,255,255,0.12); padding: 0.6rem 0; }
+details:last-of-type { border-bottom: 1px solid rgba(255,255,255,0.12); }
+summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--acento); font-size: 1.4rem; line-height: 1; }
+details[open] summary::after { content: "–"; }
+details p { color: var(--gris); margin: 0.6rem 0 0; font-size: 0.97rem; }
+
+/* WhatsApp flotante */
+.flotante {
+  position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 20;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: #25d366; display: grid; place-items: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+.flotante svg { width: 32px; height: 32px; fill: #fff; }
+.flotante:hover { background: #1ebe5a; }
+
+/* Página de gracias */
+.gracias { min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 3rem 1.25rem; }
+.gracias h1 { font-size: clamp(2.4rem, 6vw, 4rem); color: var(--dorado); }
+.gracias p { margin: 0 auto 1.5rem; }
